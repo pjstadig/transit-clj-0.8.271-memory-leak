@@ -17,10 +17,10 @@ verified.
 ## Usage
 
 This project has a main function that will attempt to transit encode 20,000 hash
-maps in chunks of 1,000.  Before starting to encode, it prints the JVM max heap
-and the version of transit-clj that it is using.  After each chunk of 1,000 hash
-maps has been encoded, it will print the number of milliseconds it took to
-complete.
+maps in chunks of 1,000 using only the default handlers.  Before starting to
+encode, it prints the JVM max heap and the version of transit-clj that it is
+using.  After each chunk of 1,000 hash maps has been encoded, it will print the
+number of milliseconds it took to complete.
 
 The project.clj sets the max heap to 50MB, which is enough to cause an overhead
 limit OOME when running the main function with transit-clj 0.8.271.
